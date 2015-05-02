@@ -1,0 +1,43 @@
+package cn.ctyun.bigdata.bdcsc.core.utility;
+
+import org.apache.commons.codec.binary.Hex;
+import org.apache.commons.codec.digest.DigestUtils;
+
+import cn.ctyun.bigdata.bdcsc.core.model.wide.MdnIdcardStatus;
+import cn.ctyun.bigdata.bdcsc.core.storage.kv.KvStore;
+import cn.ctyun.bigdata.bdcsc.core.storage.kv.KvStoreFactory;
+import cn.ctyun.bigdata.bdcsc.core.storage.kv.KvTable;
+import cn.ctyun.bigdata.bdcsc.core.storage.kv.redis.RedisStoreFactory;
+import junit.framework.TestCase;
+
+public class ODSTest extends TestCase{
+
+	protected void setUp() throws Exception {
+		super.setUp();
+	}
+	
+	public void testAll() throws Exception {
+		KvStoreFactory kvStoreFactory = RedisStoreFactory.create("127.0.0.1",6379, 30000, 50, 10);
+		KvStore kvStore = kvStoreFactory.getKvStore("admin","admin");
+		
+		KvDatabase db = store.getDataBase("ctyun_bigdata_hs");
+		if (!db.exists()) {
+			db.create(null);
+		}
+		KvTable table = db.getTable("mdn_idcard_status");
+		if (!table.exists()) {
+			KvTableOptions options = new KvTableOptions();
+			Set<String> set = new HashSet<String>();
+			for (UGeoProv p : UGeoProv.values()) {
+				set.add(p.toString());
+			}
+			options.setPartitions(set);
+			options.setEnableSlice(true);
+			table.create(options);
+		}
+		
+		
+	}
+		
+
+}

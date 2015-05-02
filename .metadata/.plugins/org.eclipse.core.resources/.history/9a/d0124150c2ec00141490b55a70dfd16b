@@ -1,0 +1,12 @@
+package cn.ctyun.bigdata.bdcsc.core.utility;
+
+import junit.framework.TestCase;
+
+public class ODSTest extends TestCase{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

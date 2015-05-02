@@ -1,0 +1,15 @@
+package cn.ctyun.bigdata.bdcsc.core.utility;
+
+import junit.framework.TestCase;
+
+public class ODSTest extends TestCase{
+
+	protected void setUp() throws Exception {
+		super.setUp();
+	}
+	
+	public void testAll() throws Exception {
+		
+	}
+
+}

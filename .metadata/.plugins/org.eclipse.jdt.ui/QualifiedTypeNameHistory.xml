@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="cn.ctyun.bigdata.bdcsc.core.storage.kv.KvStoreFactory"/>
+<fullyQualifiedTypeName name="cn.ctyun.bigdata.bdcsc.core.storage.kv.KvDatabase"/>
+<fullyQualifiedTypeName name="cn.ctyun.bigdata.bdcsc.core.storage.kv.KvTableOptions"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+</qualifiedTypeNameHistroy>
